@@ -1,0 +1,39 @@
+---
+description: TypeScript coding conventions adapted from Microsoft TypeScript guidelines
+alwaysApply: true
+---
+
+# TypeScript Coding Guidelines
+
+Use these conventions when creating or updating TypeScript in this project.
+
+## Naming
+
+- Use `PascalCase` for types, interfaces, enums, and classes.
+- Use `camelCase` for functions, methods, properties, and local variables.
+- Do not prefix interfaces with `I`.
+- Prefer whole words in names over abbreviations.
+
+## Types and Nullability
+
+- Prefer `undefined` over `null`.
+- Keep shared types explicit and avoid adding to global scope.
+- Export only what must be used across files.
+
+## Style and Constructs
+
+- Prefer arrow functions over anonymous `function` expressions.
+- Omit parentheses for single-parameter arrow functions when possible.
+- Always use braces for `if`, `else`, and loop bodies.
+- Keep opening braces on the same line as the statement.
+- Use one variable declaration per statement.
+
+## Comments and Strings
+
+- Use JSDoc comments for exported functions, classes, interfaces, and enums.
+- Use double quotes for string literals.
+
+## Practical Notes
+
+- Prefer immutable patterns for arrays and objects unless mutation is required.
+- Prefer `forEach`/`map`/`filter` style iteration when it keeps code clear.
