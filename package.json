@@ -1,5 +1,5 @@
 {
-  "name": "@dynata/dynata-sig-ts",
+  "name": "dynata-sig-ts",
   "version": "0.1.0",
   "description": "Dynata request signing SDK for Node.js in TypeScript.",
   "license": "MIT",
