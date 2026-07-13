@@ -90,12 +90,12 @@ function buildCanonicalQueryString(rawQuery: string): string {
   const valuesByKey = new Map<string, string>();
   if (rawQuery.length > 0) {
     for (const pair of rawQuery.split("&")) {
-      const eqIndex = pair.indexOf("=");
-      if (eqIndex < 0) {
+      if (pair.length === 0) {
         continue;
       }
-      const key = pair.slice(0, eqIndex);
-      const value = pair.slice(eqIndex + 1);
+      const eqIndex = pair.indexOf("=");
+      const key = eqIndex < 0 ? pair : pair.slice(0, eqIndex);
+      const value = eqIndex < 0 ? "" : pair.slice(eqIndex + 1);
       valuesByKey.set(key, value);
     }
   }
