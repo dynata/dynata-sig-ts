@@ -17,9 +17,9 @@ describe("URLCanonizer", () => {
     );
   });
 
-  it("encodes values and drops flag keys without '='", () => {
+  it("encodes and preserves duplicate keys, sorted by name then value", () => {
     expect(URLCanonizer.buildCanonicalUrl("https://example.com?a[]=1&a[]=2&b=3&empty=&flag")).toBe(
-      "https://example.com?a%5B%5D=2&b=3&empty="
+      "https://example.com?a%5B%5D=2&b=3&empty=&flag="
     );
   });
 
