@@ -19,12 +19,14 @@ Before sending signed requests you will need credentials for Dynata APIs. These 
 
 ### Installation
 
-`npm install @dynata/dynata-sig-ts`
+`npm install github:dynata/dynata-sig-ts`
 
-## Usage (ESM)
+Both examples below work from JavaScript and TypeScript; TypeScript users additionally get bundled type declarations.
+
+## Usage (TypeScript / ESM)
 
 ```ts
-import { DynataRequestSigner } from "@dynata/dynata-sig-ts";
+import { DynataRequestSigner } from "dynata-sig";
 
 const signer = new DynataRequestSigner("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 
@@ -43,7 +45,7 @@ headers.applyHeaders(requestHeaders);
 ## Usage (CommonJS)
 
 ```js
-const { DynataRequestSigner } = require("@dynata/dynata-sig-ts");
+const { DynataRequestSigner } = require("dynata-sig");
 
 const signer = new DynataRequestSigner("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 const headers = signer.generateSigningHeadersWithDefaultExpiration(
